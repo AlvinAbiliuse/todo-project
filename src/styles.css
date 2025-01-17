@@ -16,7 +16,6 @@
 	margin: 0;
 	line-height: 1.4;
 	box-sizing: border-box;
-	outline: 1px solid red;
 }
 
 html {
@@ -64,10 +63,26 @@ body {
 	dialog {
 		width: 600px;
 		margin: auto;
-		padding: 20px;
+		padding: 30px;
 		border: none;
 		border-radius: 15px;
 		box-shadow: 0 0 500px var(--lightgray);;
+	}
+	.modalCloseBtn {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		font-size: 18px;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		border: 1px solid var(--lightgray);
+		border-radius: 50px;
+	}
+	.modalCloseBtn:hover {
+		cursor: pointer;
 	}
 	dialog::backdrop {
 		background: none;

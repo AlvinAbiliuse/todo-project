@@ -8,6 +8,12 @@
 		button.textContent = "Add List";
 		userCards.appendChild(button);
 		let modal = document.createElement("dialog");
+
+		let modalCloseBtn = document.createElement("p");
+		modalCloseBtn.textContent = "x";
+		modalCloseBtn.className = "modalCloseBtn";
+		modal.appendChild(modalCloseBtn);
+ 
 		let form = document.createElement("form");
 		form.setAttribute("method", "dialog");
 		
@@ -15,7 +21,8 @@
 		let titleLabel = document.createElement("label");
 		let titleInput = document.createElement("input");
 		let descriptionLabel = document.createElement("label");
-		let descriptionInput = document.createElement("textarea");
+		let descriptionInput = document
+						.createElement("textarea");
 		let dueDateLabel = document.createElement("label");
 		let dueDateInput = document.createElement("input");
 		let priorityLabel = document.createElement("label");
