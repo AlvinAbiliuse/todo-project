@@ -60,9 +60,6 @@
 		userCards.appendChild(modal);
 
 		leftSide.appendChild(userCards);
-		
-		document.querySelector("dialog").showModal();
-		
 
 })();
 

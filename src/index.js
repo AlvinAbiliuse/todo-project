@@ -25,6 +25,28 @@ function initializePage() {
 
 initializePage();
 
+let openModal = document.querySelector(".userBtn");
+let modal = document.querySelector("dialog");
+let form = document.querySelector("dialog form");
+
+openModal.addEventListener("click", () => {
+	modal.showModal();
+});	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
