@@ -23,7 +23,7 @@ function initializePage() {
 	}
 }
 
-// initializePage();
+initializePage();
 
 let openModal = document.querySelector(".userBtn");
 let modal = document.querySelector("dialog");
@@ -41,8 +41,8 @@ form.addEventListener("submit", (e) => {
 		e.target.querySelector("#description").value,
 		e.target.querySelector("#dueDate").value,
 		e.target.querySelector("#priority").value,
-		e.target.querySelector("#check").value
-	));
+		e.target.querySelector("#check").value)
+	, Math.floor(Math.random() * 100000).toString());;
 	for (let i=0; i < 5; i++) {
 		console.log(["#title", "#description", "#dueDate", 
 			"#priority", "#check"][i]);

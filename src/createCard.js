@@ -15,6 +15,7 @@ const createCard = (data, id) => {
   dueDate.textContent = data.dueDate;
   priority.textContent = data.priority;
   check.textContent = data.check;
+	console.log(id);
   identifier.textContent = id;
   identifier.className = "identifier";
 
