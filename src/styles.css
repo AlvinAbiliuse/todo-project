@@ -41,4 +41,7 @@ body {
 	border: 1px solid lightgray;
 	border-radius: 20px;
 	box-shadow: 0 0 5px lightgray;
+	.identifier {
+		display: none;
+	}
 }
