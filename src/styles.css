@@ -1,12 +1,16 @@
+/* general styling */
+
 * {
 	padding: 0;
 	margin: 0;
 	line-height: 1.4;
 	box-sizing: border-box;
+	outline: 1px solid red;
 }
 
 html {
 	height: 100%;
+	font-family: sans-serif;
 }
 
 body {
@@ -17,6 +21,47 @@ body {
 	font-size: 20px;
 }
 
+
+
+
+
+/* left container styling */
+
+#leftContainer {
+	.userCards {
+		margin: 20px 0;
+		margin-top: 100px;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+	.userBtn {
+		padding: 15px 30px;
+		font-size: 26px;
+		font-weight: bold;
+		background: none;
+		border: lightgray;
+		border-radius: 20px;
+	}
+	.userBtn:hover {
+		cursor: pointer;
+	}
+	.listCards {
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+/* right container / main container styling */
 
 #mainContent {
 	padding: 0px 40px;
