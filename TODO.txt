@@ -1,0 +1,28 @@
+********   Core functionality   **********
+
+
+todo item properties
+	title
+	description
+	dueDate
+	priority
+	check
+
+seperate lists to show different projects
+	default project and then function to create new lists
+
+
+
+
+*********   UI   **********
+
+view all projects
+view all shortened todos in each project
+expand selected todos to view see/edit the details
+button to delete the todos in both the shortened and expanded
+	version on the todo items
+button to check the todos in both the shortened and expanded
+	version on the todo items
+button to change the priority of the todos in both the 
+	shortened and expanded version on the todo items
+
