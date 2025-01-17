@@ -10,7 +10,26 @@ html {
 }
 
 body {
+	margin: 0 20px;
 	display: grid;
-	grid-template-columns: 1fr 2fr;
+	grid-template-columns: 1fr 5fr;
 	height: 100%;
+	font-size: 20px;
+}
+
+
+.mainCards {
+	width: 100%;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	border-left: 1px solid lightgray;
+}
+
+.card {
+	padding: 40px;
+	margin: 20px;
+	border: 1px solid lightgray;
+	border-radius: 20px;
+	box-shadow: 0 0 5px lightgray;
 }

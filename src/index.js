@@ -2,49 +2,49 @@ import "./styles.css";
 
 const listItems = {
 	item1: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
 		checked: "no"
 	},
 	item2: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
 		checked: "no"
 	},
 	item3: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
 		checked: "no"
 	},
 	item4: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
 		checked: "no"
 	},
 	item5: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
 		checked: "no"
 	},
 	item6: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
 		checked: "no"
 	},
 	item7: {
-		title: "todoList",
+		title: "To do List",
 		description: "create a todo list",
 		dueDate: "1 week",
 		priority: "high",
@@ -65,7 +65,7 @@ class newData {
 };
 
 function createCard(data) {
-	const mainContainer = document.querySelector(".mainCards");
+	const mainCards = document.querySelector(".mainCards");
 	const newCard = document.createElement("div");
 	newCard.className = "card"
 
@@ -87,7 +87,7 @@ function createCard(data) {
 	newCard.appendChild(priority);		
 	newCard.appendChild(check);		
 
-	mainContent.appendChild(newCard);
+	mainCards.appendChild(newCard);
 
 }
 
