@@ -1,3 +1,14 @@
+/* setting variables */
+
+:root {
+	--black: black;
+	--lightgray: lightgray;
+}
+
+
+
+
+
 /* general styling */
 
 * {
@@ -50,6 +61,54 @@ body {
 	
 	}
 
+	dialog {
+		width: 600px;
+		margin: auto;
+		padding: 20px;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 0 0 500px var(--lightgray);;
+	}
+	dialog::backdrop {
+		background: none;
+	}
+	dialog form {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	dialog form > * {
+		margin: 10px 5px;
+	}
+	input, textarea {
+		border: 1px solid var(--lightgray);
+		border-radius: 5px;
+		padding: 5px 10px;
+	}
+
+	input:focus, textarea:focus {
+		outline: none;
+		border: 1px solid gray;
+	}
+	textarea {
+		height: 100px;
+		resize: none;
+	}
+	dialog label {
+		text-align: right;
+	}
+	dialog button {
+		grid-column: 1 / span 2;
+		padding: 15px;
+		font-weight: bold;
+		background-color: var(--black);
+		color: white;
+		border-radius: 5px;
+		margin: 10px 50px;
+	}
+	dialog button:hover {
+		cursor: pointer;
+	}	
+
 }
 
 
@@ -93,7 +152,7 @@ body {
 	width: 100%;
 	display: grid;
 	gap: 40px;
-	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
 
 .card {

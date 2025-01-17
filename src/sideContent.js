@@ -9,12 +9,12 @@
 		userCards.appendChild(button);
 		let modal = document.createElement("dialog");
 		let form = document.createElement("form");
-		form.setAttribute("method", "modal");
+		form.setAttribute("method", "dialog");
 
 		let titleLabel = document.createElement("label");
 		let titleInput = document.createElement("input");
 		let descriptionLabel = document.createElement("label");
-		let descriptionInput = document.createElement("input");
+		let descriptionInput = document.createElement("textarea");
 		let dueDateLabel = document.createElement("label");
 		let dueDateInput = document.createElement("input");
 		let priorityLabel = document.createElement("label");
@@ -24,19 +24,19 @@
 		let formSubmit = document.createElement("button");
 
 		titleLabel.setAttribute("for", "title");
-		titleLabel.textContent = "Title";
+		titleLabel.textContent = "Title:";
 		titleInput.id= "title";	
 		descriptionLabel.setAttribute("for", "description");
-		descriptionLabel.textContent = "Description";
+		descriptionLabel.textContent = "Description:";
 		descriptionInput.id = "description";
 		dueDateLabel.setAttribute("for", "dueDate");
-		dueDateLabel.textContent = "Due Date";
+		dueDateLabel.textContent = "Due Date:";
 		dueDateInput.id = "dueDate";
 		priorityLabel.setAttribute("for", "priority");
-		priorityLabel.textContent = "Priority";
+		priorityLabel.textContent = "Priority:";
 		priorityInput.id = "priority";
 		checkLabel.setAttribute("for", "check");
-		checkLabel.textContent = "Check";
+		checkLabel.textContent = "Check:";
 		checkInput.id = "check";
 		formSubmit.textContent = "Add";
 		formSubmit.className = "addSubmit";
