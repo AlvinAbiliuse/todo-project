@@ -1,6 +1,7 @@
 import "./styles.css";
 import listItems from "./data.json";
 import createCard from "./createCard.js";
+import sideContent from "./sideContent.js";
 console.log(listItems);
 
 class newData {
