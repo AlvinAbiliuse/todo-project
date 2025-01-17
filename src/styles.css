@@ -18,17 +18,26 @@ body {
 }
 
 
+#mainContent {
+	padding: 0px 40px;
+	border-left: 1px solid lightgray;
+}
+
+#mainContent > div:first-child {
+	padding: 40px 0;
+	border-bottom: 1px solid lightgray;
+	margin-bottom: 20px;
+	
+}
 .mainCards {
 	width: 100%;
-	padding: 20px;
 	display: grid;
+	gap: 40px;
 	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-	border-left: 1px solid lightgray;
 }
 
 .card {
 	padding: 40px;
-	margin: 20px;
 	border: 1px solid lightgray;
 	border-radius: 20px;
 	box-shadow: 0 0 5px lightgray;
