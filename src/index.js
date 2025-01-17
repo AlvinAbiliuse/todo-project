@@ -1,3 +1,57 @@
+import "./styles.css";
+
+const listItems = {
+	item1: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	},
+	item2: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	},
+	item3: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	},
+	item4: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	},
+	item5: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	},
+	item6: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	},
+	item7: {
+		title: "todoList",
+		description: "create a todo list",
+		dueDate: "1 week",
+		priority: "high",
+		checked: "no"
+	}
+}
+
 
 class newData {
 	constructor(title, description, dueDate, priority, check) {
@@ -37,4 +91,27 @@ function createCard(data) {
 
 }
 
-createCard(new newData("todo list", "create a to do list", "1 week", "important", "no"));
+function initializePage() {
+	for (let i = 0; i < Object.keys(listItems).length; i++) {
+		const temp = listItems[Object.keys(listItems)[i]];
+		createCard(new newData(temp["title"], temp["description"],
+			temp["dueDate"], temp["priority"], temp["check"]));
+	}
+}
+
+initializePage();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
