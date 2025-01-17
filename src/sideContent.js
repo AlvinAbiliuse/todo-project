@@ -10,6 +10,7 @@
 		let modal = document.createElement("dialog");
 		let form = document.createElement("form");
 		form.setAttribute("method", "dialog");
+		
 
 		let titleLabel = document.createElement("label");
 		let titleInput = document.createElement("input");
