@@ -1,57 +1,7 @@
 import "./styles.css";
+import listItems from "./data.json";
 
-const listItems = {
-	item1: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	},
-	item2: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	},
-	item3: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	},
-	item4: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	},
-	item5: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	},
-	item6: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	},
-	item7: {
-		title: "To do List",
-		description: "create a todo list",
-		dueDate: "1 week",
-		priority: "high",
-		checked: "no"
-	}
-}
-
+console.log(listItems);
 
 class newData {
 	constructor(title, description, dueDate, priority, check) {
@@ -107,6 +57,7 @@ function initializePage() {
 
 initializePage();
 
+console.log(JSON.stringify(listItems));
 
 
 
