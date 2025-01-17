@@ -19,7 +19,7 @@ function initializePage() {
 		let temp = listItems[Object.keys(listItems)[i]];
 		createCard(new newData(temp["title"], temp["description"],
 			temp["dueDate"], temp["priority"], temp["check"]), 
-					Object.keys(listItems)[i]);
+					Math.floor(Math.random() * 100000));
 	}
 }
 
@@ -35,21 +35,22 @@ openModal.addEventListener("click", () => {
 });	
 
 form.addEventListener("submit", (e) => {
+	let randId = Math.floor(Math.random() * 100000);
 	console.log(e.target);
+	let title = e.target.querySelector("#title").value;
+	let description =
+		e.target.querySelector("#description").value;
+	let dueDate = e.target.querySelector("#dueDate").value;
+	let priority = e.target.querySelector("#priority").value;
+	let check = e.target.querySelector("#check").value;
+
 	createCard(new newData(
-		e.target.querySelector("#title").value,
-		e.target.querySelector("#description").value,
-		e.target.querySelector("#dueDate").value,
-		e.target.querySelector("#priority").value,
-		e.target.querySelector("#check").value)
-	, Math.floor(Math.random() * 100000).toString());;
+		title, description, dueDate, priority, check), randId);
 	for (let i=0; i < 5; i++) {
-		console.log(["#title", "#description", "#dueDate", 
-			"#priority", "#check"][i]);
 		e.target.querySelector(
 			["#title", "#description", "#dueDate", "#priority",
 				"#check"][i]).value = "";
-	}	
+	}
 });
 
 closeBtn.addEventListener("click", () => {modal.close()});
