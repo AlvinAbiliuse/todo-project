@@ -11,6 +11,8 @@ todo item properties
 seperate lists to show different projects
 	default project and then function to create new lists
 
+add an identifier to each card to change it's state
+
 
 
 
