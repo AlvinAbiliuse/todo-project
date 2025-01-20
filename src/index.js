@@ -26,3 +26,12 @@ console.log(data);
 
 
 sidebar(JSON.parse(storage["storage"]));
+
+let newProject = document.querySelector(".newProjectButton");
+let modal = document.querySelector(".sidebar dialog");
+
+
+newProject.addEventListener("click", () => {
+		modal.showModal();
+});
+		
