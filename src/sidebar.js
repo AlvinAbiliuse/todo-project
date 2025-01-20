@@ -7,12 +7,23 @@ export function sidebar(data) {
 	let modal = document.createElement("dialog");
 	let cardContainer = document.createElement("div");
 
-	header.textContent = "TODO Project";
+	header.textContent = "TODO";
 	newProjectBtn.className = "newProjectButton";
 	newProjectBtn.textContent = "+ New Project";
+
 	modal.className = "newProjectModal";
+	
+	let projectName = document.createElement("label");
+	projectName.textContent = "Project Name: ";
+	let nameInput = document.createElement("input");
+	let submit = document.createElement("button");
+	submit.textContent = "Add";
 	cardContainer.className = "sideBarCards";
 
+	modal.appendChild(projectName);
+	modal.appendChild(nameInput);
+	modal.appendChild(submit);
+	
 	console.log(Object.keys(data));	
 	for (let i=0; i < Object.keys(data).length; i++) {
 		let obj = data[Object.keys(data)[i]];

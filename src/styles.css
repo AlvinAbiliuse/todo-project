@@ -70,4 +70,27 @@ button {
 }
 
 
+dialog {
+	padding: 40px;
+	margin: 150px auto;
+	border: none;
+	border-radius: 20px;
+	box-shadow: 0 0 100px var(--lightgray);
+	input {
+		margin-left: 20px;
+		outline: none;
+		padding: 5px 10px;
+		border-radius: 5px;
+		border: 1px solid var(--lightgray);
+	}
+	button {
+		margin-left: 20px;
+		padding: 5px 10px;
+	}	
+
+}
+
+dialog::backdrop {
+	background: var(--lightgray);
+}
 
