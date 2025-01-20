@@ -9,6 +9,7 @@
 	margin: 0;
 	line-height: 1.4em;
 	box-sizing: border-box;
+	outline: 1px solid red;
 }
 
 html {
@@ -35,6 +36,7 @@ body {
 
 button:hover {
 	cursor: pointer;
+	box-shadow: 0 0 5px gray;
 }
 
 button {
@@ -49,8 +51,11 @@ button {
 }
 
 .sideBarCards {
-	padding: 10px;
-	border: 2px solid var(--lightgray);
+	.sideCard {
+		padding: 10px;
+		margin-bottom: 20px;
+		border: 2px solid var(--lightgray);
+	}
 	button {
 		padding: 5px 10px;
 	}
@@ -59,10 +64,14 @@ button {
 		background: var(--red);
 		margin-right: 10px;
 	}
+	.delete:hover {
+		box-shadow: 0 0 5px var(--red);
+	}
 }
 
-.sideBarCards:hover {
+.sideCard:hover {
 	cursor: pointer;
+	box-shadow: 0 0 10px var(--lightgray);
 }
 
 .eyeD {
