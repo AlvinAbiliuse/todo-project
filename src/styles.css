@@ -20,12 +20,12 @@ body {
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	height: 100%;
+	padding-top: 10px;
 }
 
 .leftContainer {
 	height: 100%;
-	padding: 20px;
-	padding-top: 50px;
+	padding: 10px;
 }
 
 .sidebar {
@@ -103,3 +103,19 @@ dialog::backdrop {
 	background: var(--lightgray);
 }
 
+.topBar {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+.filter {
+	height: 30px;
+	width: 30px;
+	border-radius: 100px;
+	transition: transform 0.5s ease;
+}
+
+.filter:hover{
+	cursor: pointer;
+	transform: rotate(45deg);
+}
