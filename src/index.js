@@ -1,3 +1,7 @@
+import { sidebar } from "./sidebar.js";
+import "./styles.css";
+
+
 let storage = window["localStorage"];
 
 
@@ -11,9 +15,14 @@ if (storage["storage"]) {
 			"name": "Default",
 			"cards": {
 			},
+			"completed": {
+			}
 		}
 	}))
 }
 
-let data = JSON.parse(storage["storage"]);
+let data = JSON.parse(storage["storage"])["Default"];
 console.log(data);
+
+
+sidebar(JSON.parse(storage["storage"]));

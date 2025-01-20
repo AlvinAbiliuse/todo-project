@@ -5,4 +5,24 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 1000px;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	height: 100%;
+	background: red;
+}
+
+
+
+
+.leftContainer {
+	height: 100%;
+}
+
+
+
 
