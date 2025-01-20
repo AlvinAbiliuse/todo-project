@@ -1,7 +1,6 @@
 
 export function sidebar(data) {
 	let sidebar = document.querySelector(".sidebar");
-
 	let header = document.createElement("h1");
 	let newProjectBtn = document.createElement("button");
 	let modal = document.createElement("dialog");
@@ -22,15 +21,25 @@ export function sidebar(data) {
 
 	modal.appendChild(projectName);
 	modal.appendChild(nameInput);
-	modal.appendChild(submit);
 	
-	console.log(Object.keys(data));	
+	sidebar.appendChild(header);
+	sidebar.appendChild(newProjectBtn);
+	sidebar.appendChild(modal);
+	sidebar.appendChild(cardContainer);	
+
+	modal.appendChild(submit);
+
+};
+export function cards(data) {
+	let cardContainer = document.querySelector(".sideBarCards");
+	cardContainer.innerHTML = "";
 	for (let i=0; i < Object.keys(data).length; i++) {
-		let obj = data[Object.keys(data)[i]];
+		let obj = JSON.parse(data[Object.keys(data)[i]]);
 		let newCard = document.createElement("div");
 		newCard.className = "sideCard";
 		let title = document.createElement("h2");
-		title.textContent = obj.name;
+		console.log(obj);
+		title.textContent = obj["name"];
 		let elId = document.createElement("p");
 		elId.className = "eyeD";
 		elId.textContent = Object.keys(data)[i];
@@ -49,17 +58,6 @@ export function sidebar(data) {
 		newCard.appendChild(elId);
 		newCard.appendChild(lower);
 		cardContainer.appendChild(newCard);
-	}	
-
-
-
-
-	sidebar.appendChild(header);
-	sidebar.appendChild(newProjectBtn);
-	sidebar.appendChild(modal);
-	sidebar.appendChild(cardContainer);	
-
-
-
-}
+	}
+};	
 

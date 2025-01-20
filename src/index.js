@@ -1,4 +1,4 @@
-import { sidebar } from "./sidebar.js";
+import { sidebar, cards } from "./sidebar.js";
 import "./styles.css";
 
 
@@ -24,6 +24,7 @@ console.log(data);
 
 
 sidebar(storage);
+cards(storage);
 
 let newProject = document.querySelector(".newProjectButton");
 let modal = document.querySelector(".sidebar dialog");
@@ -47,7 +48,7 @@ newProjectButton.addEventListener("click", () => {
 		}
 	};
 	storage.setItem(name, JSON.stringify(obj));
-	sidebar(storage);
+	cards(storage);
 });
 
 
