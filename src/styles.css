@@ -16,19 +16,18 @@
 	margin: 0;
 	line-height: 1.4;
 	box-sizing: border-box;
+	outline: 1px solid red;
 }
 
 html {
-	height: 100%;
 	font-family: sans-serif;
 }
 
 body {
-	margin: 0 20px;
 	display: grid;
 	grid-template-columns: 1fr 5fr;
-	height: 100%;
 	font-size: 20px;
+	height: 100%;
 }
 
 
@@ -38,6 +37,7 @@ body {
 /* left container styling */
 
 #leftContainer {
+	position: sticky;
 	.userCards {
 		margin: 20px 0;
 		margin-top: 100px;
@@ -56,10 +56,6 @@ body {
 	.userBtn:hover {
 		cursor: pointer;
 	}
-	.listCards {
-	
-	}
-
 	dialog {
 		width: 600px;
 		margin: auto;
@@ -123,7 +119,6 @@ body {
 	dialog button:hover {
 		cursor: pointer;
 	}	
-
 }
 
 
@@ -138,25 +133,31 @@ body {
 /* right container / main container styling */
 
 #mainContent {
-	padding: 0px 40px;
 	border-left: 1px solid lightgray;
+	height: 100%;
 }
 
 .mainTop {
-	padding: 15px 0;
+	position: sticky;
 	border-bottom: 1px solid lightgray;
 	margin-bottom: 20px;
+	padding: 15px 40px;
 	text-align: right;
 	img {
 		width: 40px;
 		transition: transform 0.5s ease;
+		outline: none;
+		border-radius: 100px;
 	}
 	img:hover {
 		transform: rotate(90deg);
 	}
 	.filter {
+		width: 40px;
+		height: 40px;
 		border: none;
 		background: none;
+		border-radius: 100px;
 	}
 	.filter:hover {
 		cursor: pointer;
@@ -164,6 +165,7 @@ body {
 	
 }
 .mainCards {
+	padding: 0px 40px;
 	width: 100%;
 	display: grid;
 	gap: 40px;
