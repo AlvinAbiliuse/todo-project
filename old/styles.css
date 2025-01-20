@@ -1,0 +1,183 @@
+/* setting variables */
+
+:root {
+	--black: black;
+	--lightgray: lightgray;
+}
+
+
+
+
+
+/* general styling */
+
+* {
+	padding: 0;
+	margin: 0;
+	line-height: 1.4;
+	box-sizing: border-box;
+	outline: 1px solid red;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 5fr;
+	font-size: 20px;
+	height: 100%;
+}
+
+
+
+
+
+/* left container styling */
+
+#leftContainer {
+	position: sticky;
+	.userCards {
+		margin: 20px 0;
+		margin-top: 100px;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+	}
+	.userBtn {
+		padding: 15px 30px;
+		font-size: 26px;
+		font-weight: bold;
+		background: none;
+		border: lightgray;
+		border-radius: 20px;
+	}
+	.userBtn:hover {
+		cursor: pointer;
+	}
+	dialog {
+		width: 600px;
+		margin: auto;
+		padding: 30px;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 0 0 500px var(--lightgray);;
+	}
+	.modalCloseBtn {
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		font-size: 18px;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		border: 1px solid var(--lightgray);
+		border-radius: 50px;
+	}
+	.modalCloseBtn:hover {
+		cursor: pointer;
+	}
+	dialog::backdrop {
+		background: none;
+	}
+	dialog form {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+	}
+	dialog form > * {
+		margin: 10px 5px;
+	}
+	input, textarea {
+		border: 1px solid var(--lightgray);
+		border-radius: 5px;
+		padding: 5px 10px;
+	}
+
+	input:focus, textarea:focus {
+		outline: none;
+		border: 1px solid gray;
+	}
+	textarea {
+		height: 100px;
+		resize: none;
+	}
+	dialog label {
+		text-align: right;
+	}
+	dialog button {
+		grid-column: 1 / span 2;
+		padding: 15px;
+		font-weight: bold;
+		background-color: var(--black);
+		color: white;
+		border-radius: 5px;
+		margin: 10px 50px;
+	}
+	dialog button:hover {
+		cursor: pointer;
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+/* right container / main container styling */
+
+#mainContent {
+	border-left: 1px solid lightgray;
+	height: 100%;
+}
+
+.mainTop {
+	position: sticky;
+	border-bottom: 1px solid lightgray;
+	margin-bottom: 20px;
+	padding: 15px 40px;
+	text-align: right;
+	img {
+		width: 40px;
+		transition: transform 0.5s ease;
+		outline: none;
+		border-radius: 100px;
+	}
+	img:hover {
+		transform: rotate(90deg);
+	}
+	.filter {
+		width: 40px;
+		height: 40px;
+		border: none;
+		background: none;
+		border-radius: 100px;
+	}
+	.filter:hover {
+		cursor: pointer;
+	}
+	
+}
+.mainCards {
+	padding: 0px 40px;
+	width: 100%;
+	display: grid;
+	gap: 40px;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+	padding: 40px;
+	border: 1px solid lightgray;
+	border-radius: 20px;
+	box-shadow: 0 0 5px lightgray;
+	.identifier {
+		display: none;
+	}
+}
