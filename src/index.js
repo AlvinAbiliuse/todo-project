@@ -1,4 +1,8 @@
 import { sidebar, cards } from "./sidebar.js";
+
+import { rightContainer, populateMain, expandCard } from 
+	"./mainContents.js";
+
 import "./styles.css";
 
 
@@ -25,6 +29,7 @@ console.log(data);
 
 sidebar(storage);
 cards(storage);
+rightContainer();
 
 let newProject = document.querySelector(".newProjectButton");
 let modal = document.querySelector(".sidebar dialog");

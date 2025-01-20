@@ -1,18 +1,19 @@
+import image from "./images/settings.svg"
 
-
-export function rightContainer(data) {
+export function rightContainer() {
 	let container = document.querySelector(".mainContents");
 	let topBar = document.createElement("div");
 	topBar.className = "topBar";
 	let header = document.createElement("h2");
 	let img = document.createElement("img");
-	img.setAttribute("src", "./images/settings.svg");
+	img.className = "filter";
+	img.setAttribute("src", image);
 	topBar.appendChild(header);
 	topBar.appendChild(img);
 	
 	let mainCards = document.createElement("div");
-	mainCards.className = "mainCards":
-	container.appendChild(topbar);
+	mainCards.className = "mainCards";
+	container.appendChild(topBar);
 	container.appendChild(mainCards);	
 }
 
