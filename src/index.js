@@ -30,6 +30,7 @@ console.log(data);
 sidebar(storage);
 cards(storage);
 rightContainer();
+populateMain(JSON.parse(storage["Default"]));
 
 let newProject = document.querySelector(".newProjectButton");
 let modal = document.querySelector(".sidebar dialog");

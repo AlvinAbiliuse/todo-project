@@ -18,7 +18,18 @@ export function rightContainer() {
 }
 
 export function populateMain(data) {
-	console.log(data);
+	let header = document.querySelector(".topBar h2");
+	header.textContent = data.name;
+	let mainCards = document.querySelector(".mainCards");
+	let obj = data["cards"];
+	for (let i in obj) {
+		let card = document.createElement("div");
+		card.className = "card";
+		let title = document.createElement("h3");
+		title.textContent = obj[i]["name"];
+		card.appendChild(title);
+		mainCards.appendChild(card);
+	}
 }
 
 
