@@ -48,6 +48,10 @@ button {
 	background: white;
 }
 
+button:focus {
+	outline: 2px solid gray;
+}
+
 .newProjectButton {
 	width: 100%;
 	padding: 20px;
@@ -59,6 +63,9 @@ button {
 		margin-bottom: 20px;
 		border: 2px solid var(--lightgray);
 		border-radius: 10px;
+	}
+	h2 {
+		margin-bottom: 10px;
 	}
 	button {
 		padding: 5px 10px;

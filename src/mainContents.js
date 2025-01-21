@@ -68,9 +68,19 @@ export function populateMain(data) {
 	header.textContent = data.name;
 	let mainCards = document.querySelector(".mainCards");
 	mainCards.innerHTML = "";
+	if (JSON.parse(window.localStorage[data.name])[
+		"completed"] == "yes") {
+		document.querySelector(".topBar").className = 
+			"topBar completed";
+		mainCards.className = "mainCards completed";
+	} else {
+		document.querySelector(".topBar").className = "topBar";
+		mainCards.className = "mainCards";
+	}
 	let obj = data["cards"];
 	for (let i in obj) {
 		let card = document.createElement("div");
+		
 		card.className = "card";
 	
 		let title = document.createElement("h3");

@@ -59,19 +59,6 @@ newProjectButton.addEventListener("click", () => {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 let newItemModal = "";
 let itemAddModal = document.querySelector(".itemAddModal");
 let itemAdd = document.querySelector(".itemAdd");
@@ -92,9 +79,37 @@ itemSubmit.addEventListener("click", (e) => {
 		"priority": tempData.querySelector(".priorityInput")
 			.value,
 		"completed": "no",
-	})
+	});
+	tempData.querySelector(".titleInput").value = "";
+	tempData.querySelector(".descriptionInput").value = "";
+	tempData.querySelector(".dueDateInput").value = "";
+	tempData.querySelector(".priorityInput").value = "";
 	storage[currentProject] = JSON.stringify(data);
 	populateMain(data);
 
 	itemAddModal.close();
 });
+
+
+let sidebarCards = document.querySelector(".sidebar");
+sidebarCards.addEventListener("click", (e) => {
+	if (e.target.parentNode.className == "sideCard" || 
+		e.target.parentNode.classList.contains("sideCard")) {
+		let temp = e.target.parentNode.querySelector("h2").
+			textContent;
+		data = JSON.parse(storage[temp]);
+		populateMain(data);
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
