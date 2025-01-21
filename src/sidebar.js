@@ -36,7 +36,11 @@ export function cards(data) {
 	for (let i=0; i < Object.keys(data).length; i++) {
 		let obj = JSON.parse(data[Object.keys(data)[i]]);
 		let newCard = document.createElement("div");
-		newCard.className = "sideCard";
+		if (obj.completed == "yes") {
+			newCard.className = "sideCard completed"
+		} else {
+			newCard.className = "sideCard";
+		}
 		let title = document.createElement("h2");
 		title.textContent = obj["name"];
 		let elId = document.createElement("p");

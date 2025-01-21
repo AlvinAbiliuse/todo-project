@@ -9,19 +9,17 @@ import "./styles.css";
 let storage = window["localStorage"];
 
 
-if (storage) {
+if (storage.length > 0) {
 	console.log("Storage Exists");
 } else {
 	console.log("Data does not exist; creating Storage");
 	storage.setItem("Default", JSON.stringify(
 	{
 		"name": "Default",
-		"cards": {
-		},
+		"cards": [],
 		"completed": "no"
 	}))
 };
-
 let data = JSON.parse(storage["Default"]);
 
 
