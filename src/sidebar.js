@@ -38,7 +38,6 @@ export function cards(data) {
 		let newCard = document.createElement("div");
 		newCard.className = "sideCard";
 		let title = document.createElement("h2");
-		console.log(obj);
 		title.textContent = obj["name"];
 		let elId = document.createElement("p");
 		elId.className = "eyeD";

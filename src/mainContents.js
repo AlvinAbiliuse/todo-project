@@ -18,7 +18,7 @@ export function rightContainer() {
 }
 
 export function populateMain(data) {
-
+	console.log(data);
 }
 
 
