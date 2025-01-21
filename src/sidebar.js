@@ -43,9 +43,6 @@ export function cards(data) {
 		}
 		let title = document.createElement("h2");
 		title.textContent = obj["name"];
-		let elId = document.createElement("p");
-		elId.className = "eyeD";
-		elId.textContent = Object.keys(data)[i];
 		let lower = document.createElement("div");
 		let removeBtn = document.createElement("button");
 		let completeBtn = document.createElement("button");
@@ -58,7 +55,6 @@ export function cards(data) {
 		lower.appendChild(completeBtn);
 
 		newCard.appendChild(title);
-		newCard.appendChild(elId);
 		newCard.appendChild(lower);
 		cardContainer.appendChild(newCard);
 	}
