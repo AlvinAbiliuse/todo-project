@@ -22,9 +22,8 @@ if (storage) {
 		}
 	}))
 };
-console.log(storage["Default"]);
+
 let data = JSON.parse(storage["Default"]);
-console.log(data);
 
 
 sidebar(storage);
@@ -57,8 +56,12 @@ newProjectButton.addEventListener("click", () => {
 	cards(storage);
 });
 
+let newItemModal = "";
+let itemAdd = document.querySelector(".itemAdd");
 
-
+itemAdd.addEventListener("click", () => {
+	console.log("click");
+});
 
 
 
