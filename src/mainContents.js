@@ -17,6 +17,36 @@ export function rightContainer() {
 	topBar.appendChild(leftItems);
 	topBar.appendChild(img);
 	
+	let modal = document.createElement("dialog");
+	let title = document.createElement("label");
+	let description = document.createElement("label");
+	let dueDate = document.createElement("label");
+	let priority = document.createElement("label");
+
+	 
+	let titleInput = document.createElement("input");
+	let descriptionInput = document.createElement("input");
+	let dueDateInput = document.createElement("input");
+	let priorityInput = document.createElement("input");
+	
+	modal.className = "itemAddModal";
+	title.textContent = "Title: ";
+	description.textContent = "Description: ";
+	dueDate.textContent = "Due Date: ";
+	priority.textContent = "Priority: ";
+	
+
+	modal.appendChild(title);
+	modal.appendChild(titleInput);
+	modal.appendChild(description);
+	modal.appendChild(descriptionInput);
+	modal.appendChild(dueDate);
+	modal.appendChild(dueDateInput);
+	modal.appendChild(priority);
+	modal.appendChild(priorityInput);
+	topBar.appendChild(modal);	
+
+
 	let mainCards = document.createElement("div");
 	mainCards.className = "mainCards";
 	container.appendChild(topBar);
