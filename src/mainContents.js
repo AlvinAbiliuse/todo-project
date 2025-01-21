@@ -4,11 +4,17 @@ export function rightContainer() {
 	let container = document.querySelector(".mainContents");
 	let topBar = document.createElement("div");
 	topBar.className = "topBar";
+	let leftItems = document.createElement("div");
 	let header = document.createElement("h2");
+	leftItems.appendChild(header);
+	let addButton = document.createElement("button");
+	addButton.className = "itemAdd";
+	addButton.textContent = "+ Add";
+	leftItems.appendChild(addButton);
 	let img = document.createElement("img");
 	img.className = "filter";
 	img.setAttribute("src", image);
-	topBar.appendChild(header);
+	topBar.appendChild(leftItems);
 	topBar.appendChild(img);
 	
 	let mainCards = document.createElement("div");
