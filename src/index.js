@@ -28,7 +28,7 @@ let data = JSON.parse(storage["Default"]);
 sidebar(storage);
 cards(storage);
 rightContainer();
-populateMain(JSON.parse(storage["Default"]));
+populateMain(data);
 
 let newProject = document.querySelector(".newProjectButton");
 let modal = document.querySelector(".sidebar dialog");
@@ -67,8 +67,21 @@ itemSubmit.addEventListener("click", (e) => {
 	let tempData = e.target.parentNode;
 	let currentProject = document.querySelector(".topBar h2").
 		textContent;
-	console.log(currentProject);
+	data["cards"].push({
+		"name": tempData.querySelector(".titleInput").value,
+		"description": tempData.querySelector(
+			".descriptionInput").value,
+		"dueDate": tempData.querySelector(".dueDateInput").value,
+		"priority": tempData.querySelector(".priorityInput")
+			.value,
+		"completed": "no",
+	})
+	console.log(data);
+	storage[currentProject] = JSON.stringify(data);
+	populateMain(data);
+
 	itemAddModal.close();
 });
 
-	
+let addProjectButton = document.querySelector(
+	".newProjectButton");
