@@ -25,10 +25,13 @@ export function rightContainer() {
 
 	 
 	let titleInput = document.createElement("input");
-	let descriptionInput = document.createElement("input");
+	let descriptionInput = document.createElement("textarea");
 	let dueDateInput = document.createElement("input");
 	let priorityInput = document.createElement("input");
-	
+	let submitButton = document.createElement("button");
+	submitButton.className = "itemSubmitBtn";	
+	submitButton.textContent = "Add To List";	
+
 	modal.className = "itemAddModal";
 	title.textContent = "Title: ";
 	description.textContent = "Description: ";
@@ -44,6 +47,7 @@ export function rightContainer() {
 	modal.appendChild(dueDateInput);
 	modal.appendChild(priority);
 	modal.appendChild(priorityInput);
+	modal.appendChild(submitButton);
 	topBar.appendChild(modal);	
 
 

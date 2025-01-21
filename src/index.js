@@ -18,8 +18,7 @@ if (storage) {
 		"name": "Default",
 		"cards": {
 		},
-		"completed": {
-		}
+		"completed": "no"
 	}))
 };
 
@@ -57,10 +56,11 @@ newProjectButton.addEventListener("click", () => {
 });
 
 let newItemModal = "";
+let itemAddModal = document.querySelector(".itemAddModal");
 let itemAdd = document.querySelector(".itemAdd");
-
+let itemSubmit = document
 itemAdd.addEventListener("click", () => {
-	console.log("click");
+	itemAddModal.showModal();
 });
 
 
