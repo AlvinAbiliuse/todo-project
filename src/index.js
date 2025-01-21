@@ -30,6 +30,11 @@ cards(storage);
 rightContainer();
 populateMain(data);
 
+
+
+
+
+
 let newProject = document.querySelector(".newProjectButton");
 let modal = document.querySelector(".sidebar dialog");
 let newProjectButton = document.querySelector(
@@ -46,14 +51,28 @@ newProjectButton.addEventListener("click", () => {
 	modal.close();
 	let obj = {
 		"name": name,
-		"cards": {
-		},
-		"completed": {
-		}
+		"cards": [],
+		"completed": "",
 	};
 	storage.setItem(name, JSON.stringify(obj));
+	data = JSON.parse(storage[name]);
 	cards(storage);
+	populateMain(data);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let newItemModal = "";
 let itemAddModal = document.querySelector(".itemAddModal");
@@ -76,12 +95,8 @@ itemSubmit.addEventListener("click", (e) => {
 			.value,
 		"completed": "no",
 	})
-	console.log(data);
 	storage[currentProject] = JSON.stringify(data);
 	populateMain(data);
 
 	itemAddModal.close();
 });
-
-let addProjectButton = document.querySelector(
-	".newProjectButton");
