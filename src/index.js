@@ -58,11 +58,17 @@ newProjectButton.addEventListener("click", () => {
 let newItemModal = "";
 let itemAddModal = document.querySelector(".itemAddModal");
 let itemAdd = document.querySelector(".itemAdd");
-let itemSubmit = document
+let itemSubmit = document.querySelector(".itemSubmitBtn");
 itemAdd.addEventListener("click", () => {
 	itemAddModal.showModal();
 });
 
-
+itemSubmit.addEventListener("click", (e) => {
+	let tempData = e.target.parentNode;
+	let currentProject = document.querySelector(".topBar h2").
+		textContent;
+	console.log(currentProject);
+	itemAddModal.close();
+});
 
 	

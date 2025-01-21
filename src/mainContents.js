@@ -34,6 +34,10 @@ export function rightContainer() {
 	submitButton.className = "itemSubmitBtn";	
 	submitButton.textContent = "Add To List";	
 
+	titleInput.className = "titleInput";
+	descriptionInput.className = "descriptionInput";
+	dueDateInput.className = "dueDateInput";
+	priorityInput.className = "priorityInput";
 	modal.className = "itemAddModal";
 	title.textContent = "Title: ";
 	description.textContent = "Description: ";

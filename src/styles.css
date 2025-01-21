@@ -135,6 +135,9 @@ dialog::backdrop {
 	button {
 		padding: 5px 10px;
 	}
+	.itemAdd {
+		margin-left: 50px;
+	}
 }
 .filter {
 	height: 30px;
