@@ -27,7 +27,9 @@ export function rightContainer() {
 	let titleInput = document.createElement("input");
 	let descriptionInput = document.createElement("textarea");
 	let dueDateInput = document.createElement("input");
+	dueDateInput.setAttribute("type", "date");
 	let priorityInput = document.createElement("input");
+	priorityInput.setAttribute("type", "number");
 	let submitButton = document.createElement("button");
 	submitButton.className = "itemSubmitBtn";	
 	submitButton.textContent = "Add To List";	
@@ -61,6 +63,7 @@ export function populateMain(data) {
 	let header = document.querySelector(".topBar h2");
 	header.textContent = data.name;
 	let mainCards = document.querySelector(".mainCards");
+	mainCards.innerHTML = "";
 	let obj = data["cards"];
 	for (let i in obj) {
 		let card = document.createElement("div");
@@ -69,15 +72,21 @@ export function populateMain(data) {
 		let title = document.createElement("h3");
 		title.textContent = obj[i]["name"];
 		card.appendChild(title);
+		let dueDate = document.createElement("p");
+		/* add dueDate data */	
 		let rightButtons = document.createElement("div");
 		let removeBtn = document.createElement("button");
 		removeBtn.className = "removeBtn";
 		let completeBtn = document.createElement("button");
 		completeBtn.className = "completeBtn";
+		let editBtn = document.createElement("button");
+		editBtn.className = "editBtn";
 		removeBtn.textContent = "Remove";
 		completeBtn.textContent = "Complete";
+		editBtn.textContent = "Edit";
 		rightButtons.appendChild(removeBtn);
 		rightButtons.appendChild(completeBtn);
+		rightButtons.appendChild(editBtn);
 		card.appendChild(rightButtons);
 		mainCards.appendChild(card);
 	}

@@ -21,6 +21,7 @@ body {
 	grid-template-columns: 1fr 5fr;
 	height: 100%;
 	padding: 10px;
+	font-family: sans-serif;
 }
 
 .leftContainer {
@@ -97,6 +98,7 @@ dialog {
 		border-radius: 5px;
 		border: 1px solid var(--lightgray);
 		resize: none;
+		font-family: inherit;
 	}
 	textarea {
 		height: 100px;
@@ -131,7 +133,6 @@ dialog::backdrop {
 		display: flex;
 	}
 	button {
-		margin-left: 30px;
 		padding: 5px 10px;
 	}
 }
@@ -164,7 +165,6 @@ dialog::backdrop {
 	.removeBtn {
 		background: red;
 		color: white;
-		margin-right: 15px;
 	}
 	.removeBtn:hover {
 		border-color: white;
@@ -172,6 +172,7 @@ dialog::backdrop {
 	}
 	button {
 		padding: 5px 15px;
+		margin-right: 10px;
 	}
 }
 

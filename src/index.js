@@ -65,7 +65,4 @@ itemAdd.addEventListener("click", () => {
 
 
 
-
-
-
 	
