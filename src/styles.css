@@ -9,6 +9,7 @@
 	margin: 0;
 	line-height: 1.4em;
 	box-sizing: border-box;
+	outline: 1px solid red;
 }
 
 html {
@@ -140,4 +141,23 @@ dialog::backdrop {
 		margin: 20px;
 		padding: 20px;
 	}
+	div {
+		margin-top: 10px;
+	}
+	.removeBtn {
+		background: red;
+		color: white;
+		margin-right: 15px;
+	}
+	.removeBtn:hover {
+		border-color: white;
+		box-shadow: 0 0 5px red;
+	}
+	button {
+		padding: 5px 15px;
+	}
+}
+
+.completed {
+	opacity: 0.5;
 }

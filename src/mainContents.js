@@ -31,9 +31,20 @@ export function populateMain(data) {
 	for (let i in obj) {
 		let card = document.createElement("div");
 		card.className = "card";
+	
 		let title = document.createElement("h3");
 		title.textContent = obj[i]["name"];
 		card.appendChild(title);
+		let rightButtons = document.createElement("div");
+		let removeBtn = document.createElement("button");
+		removeBtn.className = "removeBtn";
+		let completeBtn = document.createElement("button");
+		completeBtn.className = "completeBtn";
+		removeBtn.textContent = "Remove";
+		completeBtn.textContent = "Complete";
+		rightButtons.appendChild(removeBtn);
+		rightButtons.appendChild(completeBtn);
+		card.appendChild(rightButtons);
 		mainCards.appendChild(card);
 	}
 }
