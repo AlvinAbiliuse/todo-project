@@ -102,6 +102,9 @@ sidebarCards.addEventListener("click", (e) => {
 	}
 });
 
+let deleteBtn = document.querySelector(".delete");
+let completeBtn = document.querySelector(".complete");
+
 
 
 
