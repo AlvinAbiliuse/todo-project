@@ -9,7 +9,7 @@ import "./styles.css";
 let storage = window["localStorage"];
 
 function initialize() {
-	if (storage.length > 0) {
+	if (storage.length > 1) {
 		console.log("Storage Exists");
 	} else {
 		console.log("Data does not exist; creating Storage");
@@ -28,6 +28,7 @@ function initialize() {
 };
 
 initialize();
+
 let current = JSON.parse(storage["current"])["current"]
 let data = JSON.parse(storage[current]);
 
@@ -207,9 +208,28 @@ mainCardButtons.addEventListener("click", (e) => {
 	} else if (e.target.className == "editBtn") {
 		console.log(e.target);
 
-	} else if (e.target.classList.contains( "card") ||
-		e.target.nodeName == "H3") {
+	} else if (e.target.classList.contains("card")) {
 		infoModal.showModal();
+		let cardData;
+		for (let i in data["cards"]) {
+			if (data["cards"][i]["name"] == e.target.
+				querySelector("h3").textContent) {
+				cardData = data["cards"][i]
+			}
+		}
+		console.log(cardData);
+	
+	} else if (e.target.nodeName == "H3") {
+		infoModal.showModal();
+		let cardData;
+		for (let i in data["cards"]) {
+			if (data["cards"][i]["name"] == e.target.textContent) {
+				cardData = data["cards"][i]
+			}
+		}
+		console.log(cardData);
+	
+
 	}
 });
 
