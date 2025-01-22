@@ -82,16 +82,11 @@ export function populateMain(data) {
 	let modalEditBtn = document.createElement("button");
 	
 	modalTitle.className = "infoTitle";
-	modalDescription.className = "infoTitle";
+	modalDescription.className = "infoDescription";
 	modalDueDate.className = "infoDueDate";
 	modalPriority.className = "infoPriority";
 	modalCloseBtn.className = "infoCloseBtn";
 	modalEditBtn.className = "infoEditBtn";
-	
-	modalTitle.textContent = "test Title";
-	modalDescription.textContent = "test Description";
-	modalDueDate.textContent = "test Due Date";
-	modalPriority.textContent = "test Priority";
 	
 	modalCloseBtn.textContent = "close";
 	modalEditBtn.textContent = "edit";
@@ -149,7 +144,3 @@ export function populateMain(data) {
 	}
 }
 
-
-export function expandCard(data) {
-
-}

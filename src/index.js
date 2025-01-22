@@ -1,6 +1,6 @@
 import { sidebar, cards } from "./sidebar.js";
 
-import { rightContainer, populateMain, expandCard } from 
+import { rightContainer, populateMain } from 
 	"./mainContents.js";
 
 import "./styles.css";
@@ -154,6 +154,22 @@ sidebarBtn.addEventListener("click", (e) => {
 	}
 });	
 
+
+function expandCards(data) {
+	console.log(data);
+	
+	document.querySelector(".infoTitle").textContent = 
+		`Name: ${data.name}`;
+	document.querySelector(".infoDescription").textContent  = 
+		`Description: ${data.description}`;
+	document.querySelector(".infoDueDate").textContent = 
+		`Due Date: ${data.dueDate}`;
+	document.querySelector(".infoPriority").textContent = 
+		`Priority: ${data.priority}`;
+
+	infoModal.showModal();
+}
+
 let infoCloseBtn = document.querySelector(".infoCloseBtn");
 let mainCardButtons = document.querySelector(".mainCards");
 let infoModal = document.querySelector(".infoModal");
@@ -217,7 +233,8 @@ mainCardButtons.addEventListener("click", (e) => {
 				cardData = data["cards"][i]
 			}
 		}
-		console.log(cardData);
+	
+		expandCards(cardData);
 	
 	} else if (e.target.nodeName == "H3") {
 		infoModal.showModal();
@@ -227,7 +244,7 @@ mainCardButtons.addEventListener("click", (e) => {
 				cardData = data["cards"][i]
 			}
 		}
-		console.log(cardData);
+		expandCards(cardData);
 	
 
 	}
