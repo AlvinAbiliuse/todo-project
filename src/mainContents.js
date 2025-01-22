@@ -38,6 +38,8 @@ export function rightContainer() {
 	descriptionInput.className = "descriptionInput";
 	dueDateInput.className = "dueDateInput";
 	priorityInput.className = "priorityInput";
+	priorityInput.setAttribute("min", 0);
+	priorityInput.setAttribute("max", 10);
 	modal.className = "itemAddModal";
 	title.textContent = "Title: ";
 	description.textContent = "Description: ";
@@ -66,8 +68,32 @@ export function rightContainer() {
 export function populateMain(data) {
 	let header = document.querySelector(".topBar h2");
 	header.textContent = data.name;
+
+	let infoModal = document.createElement("dialog");
+	infoModal.className = "infoModal";
+	let modalTitle = document.createElement("h3");
+	let modalDescription = document.createElement("p");
+	let modalDueDate = document.createElement("p");
+	let modalPriority = document.createElement("p");
+	let modalCloseBtn = document.createElement("button");
+	
+	modalTitle.textContent = "test Title";
+	modalDescription.textContent = "test Description";
+	modalDueDate.textContent = "test Due Date";
+	modalPriority.textContent = "test Priority";
+	
+	modalCloseBtn.textContent = "close";
+
+	infoModal.appendChild(modalTitle);
+	infoModal.appendChild(modalDescription);
+	infoModal.appendChild(modalDueDate);
+	infoModal.appendChild(modalPriority);
+	infoModal.appendChild(modalCloseBtn);
+
+
 	let mainCards = document.querySelector(".mainCards");
 	mainCards.innerHTML = "";
+	mainCards.appendChild(infoModal);
 	if (JSON.parse(window.localStorage[data.name])[
 		"completed"] == "yes") {
 		document.querySelector(".topBar").className = 
@@ -112,6 +138,5 @@ export function populateMain(data) {
 
 
 export function expandCard(data) {
-
 
 }
