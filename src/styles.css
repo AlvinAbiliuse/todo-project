@@ -29,11 +29,17 @@ body {
 }
 
 .sidebar {
+	display: grid;
 	> * {
 		margin-bottom: 40px;
 	}
 	h1 {
 		text-align: center;
+	}
+	.logo {
+		width: 80px;
+		margin: 0px;
+		justify-self: center;
 	}
 }
 
@@ -221,7 +227,3 @@ dialog::backdrop {
 .topBarCloseBtn:hover, .sideBarCloseBtn:hover {
 	cursor: pointer;
 }
-
-
-
-
