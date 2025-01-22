@@ -177,11 +177,22 @@ mainCardButtons.addEventListener("click", (e) => {
 				}
 			}
 		}
-		console.log(data);
-		storage[data.name] = JSON.stringify(data);
+	storage[data.name] = JSON.stringify(data);
 		
 	} else if (e.target.className == "removeBtn") {
-		console.log(e.target);
+		let removed = 0;
+		for (let i in data.cards) {
+			if (e.target.parentNode.parentNode.querySelector("h3").
+				textContent == data.cards[i].name) {
+				console.log(data.cards[i].name);
+				console.log(i - removed);
+				data.cards.splice(i - removed, (i + 1) - removed);
+				removed++
+			}
+		}
+		e.target.parentNode.parentNode.remove();
+		storage[data.name] = JSON.stringify(data);
+		console.log(data.cards);
 	} else if (e.target.className == "editBtn") {
 		console.log(e.target);
 	} else if (e.target.classList.contains( "card")) {
