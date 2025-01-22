@@ -1,6 +1,8 @@
 :root {
 	--lightgray: lightgray;
-	--red: red;
+	--red: #ff2424;
+	--orange: #ff982b;
+	--blue: #2b9bff;
 }
 
 
@@ -178,12 +180,12 @@ dialog::backdrop {
 		margin-top: 10px;
 	}
 	.removeBtn {
-		background: red;
+		background: var(--red);
 		color: white;
 	}
 	.removeBtn:hover {
 		border-color: white;
-		box-shadow: 0 0 5px red;
+		box-shadow: 0 0 5px var(--red);
 	}
 	button {
 		padding: 5px 15px;
