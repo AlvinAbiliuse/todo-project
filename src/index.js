@@ -147,3 +147,22 @@ sidebarBtn.addEventListener("click", (e) => {
 
 
 let mainCardButtons = document.querySelector(".mainCards");
+
+mainCardButtons.addEventListener("click", (e) => {
+	console.log(e.target.className);
+	if (e.target.className == "completeBtn") {
+		console.log("complete");
+	} else if (e.target.className == "removeBtn") {
+		console.log("remove");
+	} else if (e.target.className == "editBtn") {
+		console.log("edit");
+	}
+});
+
+
+
+
+
+
+
+
