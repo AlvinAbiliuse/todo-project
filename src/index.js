@@ -108,7 +108,6 @@ sidebarCards.addEventListener("click", (e) => {
 let sidebarBtn = document.querySelector(".sideBarCards");
 
 sidebarBtn.addEventListener("click", (e) => {
-	console.log(e.target);
 	if (e.target.className == "complete") {
 		let tempStorage = JSON.parse(storage[e.target.parentNode.
 			parentNode.querySelector("h2").textContent]);
@@ -157,15 +156,28 @@ mainCardButtons.addEventListener("click", (e) => {
 			for (let i in data.cards) {
 				if (data.cards[i].name == e.target.parentNode.
 					parentNode.querySelector("h3").textContent) {
+					console.log(data.cards[i]);
 					if (data.cards[i].completed == "no") {
 						data.cards[i].completed = "yes";
-					} else {
+					} else if (data.cards[i].completed == "yes") {
+						data.cards[i].completed = "no";
+					}
+				}
+			}
+		} else {
+			for (let i in data.cards) {
+				if (data.cards[i].name == e.target.parentNode.
+					parentNode.querySelector("h3").textContent) {
+					console.log(data.cards[i]);
+					if (data.cards[i].completed == "no") {
+						data.cards[i].completed = "yes";
+					} else if (data.cards[i].completed == "yes") {
 						data.cards[i].completed = "no";
 					}
 				}
 			}
 		}
-		console.log(JSON.stringify(data));
+		console.log(data);
 		storage[data.name] = JSON.stringify(data);
 		
 	} else if (e.target.className == "removeBtn") {

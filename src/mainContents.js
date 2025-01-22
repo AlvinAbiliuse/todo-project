@@ -80,8 +80,12 @@ export function populateMain(data) {
 	let obj = data["cards"];
 	for (let i in obj) {
 		let card = document.createElement("div");
-		
-		card.className = "card";
+	
+		if (obj[i].completed == "no") {
+			card.className = "card";
+		} else if (obj[i].completed == "yes") {
+			card.className = "card completed";
+		}
 	
 		let title = document.createElement("h3");
 		title.textContent = obj[i]["name"];
