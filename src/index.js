@@ -149,15 +149,33 @@ sidebarBtn.addEventListener("click", (e) => {
 let mainCardButtons = document.querySelector(".mainCards");
 
 mainCardButtons.addEventListener("click", (e) => {
-	console.log(e.target.className);
 	if (e.target.className == "completeBtn") {
-		console.log(e.target);
+		e.target.parentNode.parentNode.classList.toggle(
+			"completed");
+		if (e.target.parentNode.parentNode.classList.contains(
+			"completed")) {
+			for (let i in data.cards) {
+				if (data.cards[i].name == e.target.parentNode.
+					parentNode.querySelector("h3").textContent) {
+					if (data.cards[i].completed == "no") {
+						data.cards[i].completed = "yes";
+					} else {
+						data.cards[i].completed = "no";
+					}
+				}
+			}
+		}
+		console.log(JSON.stringify(data));
+		storage[data.name] = JSON.stringify(data);
+		
 	} else if (e.target.className == "removeBtn") {
 		console.log(e.target);
 	} else if (e.target.className == "editBtn") {
 		console.log(e.target);
-	} else if (e.target.className == "card") {
+	} else if (e.target.classList.contains( "card")) {
 		console.log(e.target);
+	} else if (e.target.nodeName == "H3") {
+		console.log("h3");
 	}
 });
 
