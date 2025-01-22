@@ -69,7 +69,6 @@ newProjectButton.addEventListener("click", () => {
 });
 
 
-let newItemModal = "";
 let itemAddModal = document.querySelector(".itemAddModal");
 let itemAdd = document.querySelector(".itemAdd");
 let itemSubmit = document.querySelector(".itemSubmitBtn");
@@ -90,10 +89,10 @@ itemSubmit.addEventListener("click", (e) => {
 			.value,
 		"completed": "no",
 	});
-	tempData.querySelector(".titleInput").value = "";
-	tempData.querySelector(".descriptionInput").value = "";
-	tempData.querySelector(".dueDateInput").value = "";
-	tempData.querySelector(".priorityInput").value = "";
+	document.querySelector(".titleInput").value = "";
+	document.querySelector(".descriptionInput").value = "";
+	document.querySelector(".dueDateInput").value = "";
+	document.querySelector(".priorityInput").value = "";
 	storage[currentProject] = JSON.stringify(data);
 	populateMain(data);
 
@@ -225,7 +224,6 @@ mainCardButtons.addEventListener("click", (e) => {
 		console.log(e.target);
 
 	} else if (e.target.classList.contains("card")) {
-		infoModal.showModal();
 		let cardData;
 		for (let i in data["cards"]) {
 			if (data["cards"][i]["name"] == e.target.
@@ -237,7 +235,6 @@ mainCardButtons.addEventListener("click", (e) => {
 		expandCards(cardData);
 	
 	} else if (e.target.nodeName == "H3") {
-		infoModal.showModal();
 		let cardData;
 		for (let i in data["cards"]) {
 			if (data["cards"][i]["name"] == e.target.textContent) {

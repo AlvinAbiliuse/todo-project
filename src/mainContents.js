@@ -32,8 +32,6 @@ export function rightContainer() {
 	let submitButton = document.createElement("button");
 	submitButton.className = "itemSubmitBtn";	
 	submitButton.textContent = "Add To List";	
-	let modalClose = document.createElement("p");
-	modalClose.className = "topBarCloseBtn";
 
 	titleInput.className = "titleInput";
 	descriptionInput.className = "descriptionInput";
@@ -46,8 +44,7 @@ export function rightContainer() {
 	description.textContent = "Description: ";
 	dueDate.textContent = "Due Date: ";
 	priority.textContent = "Priority: ";
-	modalClose.textContent = "x";
-	
+
 
 	modal.appendChild(title);
 	modal.appendChild(titleInput);
@@ -58,7 +55,6 @@ export function rightContainer() {
 	modal.appendChild(priority);
 	modal.appendChild(priorityInput);
 	modal.appendChild(submitButton);
-	modal.appendChild(modalClose);
 	topBar.appendChild(modal);	
 
 
@@ -80,14 +76,14 @@ export function populateMain(data) {
 	let modalPriority = document.createElement("p");
 	let modalCloseBtn = document.createElement("button");
 	let modalEditBtn = document.createElement("button");
-	
+
 	modalTitle.className = "infoTitle";
 	modalDescription.className = "infoDescription";
 	modalDueDate.className = "infoDueDate";
 	modalPriority.className = "infoPriority";
 	modalCloseBtn.className = "infoCloseBtn";
 	modalEditBtn.className = "infoEditBtn";
-	
+
 	modalCloseBtn.textContent = "close";
 	modalEditBtn.textContent = "edit";
 

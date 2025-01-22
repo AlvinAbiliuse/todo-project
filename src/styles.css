@@ -135,6 +135,7 @@ dialog::backdrop {
 
 .topBar {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 40px;
 	border-bottom: 1px solid var(--lightgray);
