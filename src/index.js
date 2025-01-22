@@ -151,11 +151,13 @@ let mainCardButtons = document.querySelector(".mainCards");
 mainCardButtons.addEventListener("click", (e) => {
 	console.log(e.target.className);
 	if (e.target.className == "completeBtn") {
-		console.log("complete");
+		console.log(e.target);
 	} else if (e.target.className == "removeBtn") {
-		console.log("remove");
+		console.log(e.target);
 	} else if (e.target.className == "editBtn") {
-		console.log("edit");
+		console.log(e.target);
+	} else if (e.target.className == "card") {
+		console.log(e.target);
 	}
 });
 
