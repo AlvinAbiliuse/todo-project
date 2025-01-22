@@ -153,9 +153,9 @@ sidebarBtn.addEventListener("click", (e) => {
 	}
 });	
 
-
+let infoCloseBtn = document.querySelector(".infoCloseBtn");
 let mainCardButtons = document.querySelector(".mainCards");
-
+let infoModal = document.querySelector(".infoModal");
 mainCardButtons.addEventListener("click", (e) => {
 	if (e.target.className == "completeBtn") {
 		e.target.parentNode.parentNode.classList.toggle(
@@ -202,18 +202,22 @@ mainCardButtons.addEventListener("click", (e) => {
 		e.target.parentNode.parentNode.remove();
 		storage[data.name] = JSON.stringify(data);
 		console.log(data.cards);
+
+
 	} else if (e.target.className == "editBtn") {
 		console.log(e.target);
-	} else if (e.target.classList.contains( "card")) {
-		console.log(e.target);
-	} else if (e.target.nodeName == "H3") {
-		console.log("h3");
+
+	} else if (e.target.classList.contains( "card") ||
+		e.target.nodeName == "H3") {
+		infoModal.showModal();
 	}
 });
 
 
 
-
+infoCloseBtn.addEventListener("click", () => {
+		infoModal.close()
+});
 
 
 
