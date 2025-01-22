@@ -19,11 +19,17 @@ function initialize() {
 			"cards": [],
 			"completed": "no"
 		}))
+		storage.setItem("current", JSON.stringify(
+		{
+			"name": "current",
+			"current": "Default",
+		}))	
 	}
 };
 
 initialize();
-let data = JSON.parse(storage["Default"]);
+let current = JSON.parse(storage["current"])["current"]
+let data = JSON.parse(storage[current]);
 
 
 sidebar(storage);
@@ -100,6 +106,9 @@ sidebarCards.addEventListener("click", (e) => {
 		e.target.parentNode.classList.contains("sideCard")) {
 		let temp = e.target.parentNode.querySelector("h2").
 			textContent;
+		let tempCurr = JSON.parse(storage["current"]);
+		tempCurr.current = temp;
+		storage["current"] = JSON.stringify(tempCurr)
 		data = JSON.parse(storage[temp]);
 		populateMain(data);
 	}

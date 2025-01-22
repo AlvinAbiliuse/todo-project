@@ -34,6 +34,10 @@ export function cards(data) {
 	let cardContainer = document.querySelector(".sideBarCards");
 	cardContainer.innerHTML = "";
 	for (let i=0; i < Object.keys(data).length; i++) {
+		if (JSON.parse(data[Object.keys(data)[i]])["name"]
+			 == "current") {
+			continue;
+		}
 		let obj = JSON.parse(data[Object.keys(data)[i]]);
 		let newCard = document.createElement("div");
 		if (obj.completed == "yes") {
