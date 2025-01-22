@@ -169,6 +169,10 @@ dialog::backdrop {
 		margin: 20px;
 		padding: 20px;
 	}
+	.card:hover {
+		box-shadow: 0 0 10px var(--lightgray);
+		cursor: pointer;
+	}
 	div {
 		margin-top: 10px;
 	}

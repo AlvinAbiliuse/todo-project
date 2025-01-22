@@ -105,9 +105,6 @@ sidebarCards.addEventListener("click", (e) => {
 	}
 });
 
-let deleteBtn = document.querySelector(".delete");
-let completeBtn = document.querySelector(".complete");
-
 let sidebarBtn = document.querySelector(".sideBarCards");
 
 sidebarBtn.addEventListener("click", (e) => {
@@ -138,8 +135,8 @@ sidebarBtn.addEventListener("click", (e) => {
 			querySelector("h2").textContent);
 		cards(storage);
 		if (storage.length > 0) {
-			populateMain(data);
 			data = JSON.parse(storage[Object.keys(storage)[0]]);
+			populateMain(data);
 		} else {
 			document.querySelector(".topBar h2").textContent = "";
 			document.querySelector(".mainCards").innerHTML = "";
@@ -149,22 +146,4 @@ sidebarBtn.addEventListener("click", (e) => {
 });	
 
 
-completeBtn.addEventListener("click", (e) => {
-		console.log(e.target.parentNode.parentNode);
-	if (e.target.parentNode.parentNode.classList.contains(
-		"sideCard")) {
-		if (e.target.parentNode.parentNode.classList.contains(
-			"completed")) {
-		}
-	}
-});
-
-
-
-
-
-
-
-
-
-
+let mainCardButtons = document.querySelector(".mainCards");
