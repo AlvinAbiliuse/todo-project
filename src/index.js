@@ -73,6 +73,27 @@ let itemAddModal = document.querySelector(".itemAddModal");
 let itemAdd = document.querySelector(".itemAdd");
 let itemSubmit = document.querySelector(".itemSubmitBtn");
 itemAdd.addEventListener("click", () => {
+	let cDate = new Date();
+	let month, day;
+	if (cDate.getMonth() + 1 < 10) {
+		month = "0" + (cDate.getMonth() + 1);
+	} else {
+		month = cDate.getMonth();
+	}
+	if (cDate.getDay() > 10) {
+		day = "0" + cDate.getDate();
+	} else {
+		day = cDate.getDate();
+	}
+	let fDate = `${cDate.getFullYear()}-${month}-${day}`;
+
+	console.log(fDate);
+	document.querySelector(".titleInput").value = "";
+	document.querySelector(".descriptionInput").value = "";
+	
+	document.querySelector(".dueDateInput").value = fDate;
+	document.querySelector(".priorityInput").value = 0;
+
 	itemAddModal.showModal();
 });
 
@@ -89,10 +110,6 @@ itemSubmit.addEventListener("click", (e) => {
 			.value,
 		"completed": "no",
 	});
-	document.querySelector(".titleInput").value = "";
-	document.querySelector(".descriptionInput").value = "";
-	document.querySelector(".dueDateInput").value = "";
-	document.querySelector(".priorityInput").value = "";
 	storage[currentProject] = JSON.stringify(data);
 	populateMain(data);
 
@@ -166,12 +183,13 @@ function expandCards(data) {
 	document.querySelector(".infoPriority").textContent = 
 		`Priority: ${data.priority}`;
 
+	let infoModal = document.querySelector(".infoModal");
 	infoModal.showModal();
 }
 
 let infoCloseBtn = document.querySelector(".infoCloseBtn");
 let mainCardButtons = document.querySelector(".mainCards");
-let infoModal = document.querySelector(".infoModal");
+
 mainCardButtons.addEventListener("click", (e) => {
 	if (e.target.className == "completeBtn") {
 		e.target.parentNode.parentNode.classList.toggle(
@@ -245,12 +263,6 @@ mainCardButtons.addEventListener("click", (e) => {
 	
 
 	}
-});
-
-
-
-infoCloseBtn.addEventListener("click", () => {
-		infoModal.close()
 });
 
 

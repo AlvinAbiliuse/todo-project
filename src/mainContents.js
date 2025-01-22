@@ -81,18 +81,11 @@ export function populateMain(data) {
 	modalDescription.className = "infoDescription";
 	modalDueDate.className = "infoDueDate";
 	modalPriority.className = "infoPriority";
-	modalCloseBtn.className = "infoCloseBtn";
-	modalEditBtn.className = "infoEditBtn";
-
-	modalCloseBtn.textContent = "close";
-	modalEditBtn.textContent = "edit";
 
 	infoModal.appendChild(modalTitle);
 	infoModal.appendChild(modalDescription);
 	infoModal.appendChild(modalDueDate);
 	infoModal.appendChild(modalPriority);
-	infoModal.appendChild(modalCloseBtn);
-	infoModal.appendChild(modalEditBtn);
 
 
 	let mainCards = document.querySelector(".mainCards");
