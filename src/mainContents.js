@@ -76,6 +76,14 @@ export function populateMain(data) {
 	let modalDueDate = document.createElement("p");
 	let modalPriority = document.createElement("p");
 	let modalCloseBtn = document.createElement("button");
+	let modalEditBtn = document.createElement("button");
+	
+	modalTitle.className = "infoTitle";
+	modalDescription.className = "infoTitle";
+	modalDueDate.className = "infoDueDate";
+	modalPriority.className = "infoPriority";
+	modalCloseBtn.className = "infoCloseBtn";
+	modalEditBtn.className = "infoEditBtn";
 	
 	modalTitle.textContent = "test Title";
 	modalDescription.textContent = "test Description";
@@ -83,12 +91,14 @@ export function populateMain(data) {
 	modalPriority.textContent = "test Priority";
 	
 	modalCloseBtn.textContent = "close";
+	modalEditBtn.textContent = "edit";
 
 	infoModal.appendChild(modalTitle);
 	infoModal.appendChild(modalDescription);
 	infoModal.appendChild(modalDueDate);
 	infoModal.appendChild(modalPriority);
 	infoModal.appendChild(modalCloseBtn);
+	infoModal.appendChild(modalEditBtn);
 
 
 	let mainCards = document.querySelector(".mainCards");

@@ -86,11 +86,6 @@ button:focus {
 	box-shadow: 0 0 10px var(--lightgray);
 }
 
-.eyeD {
-	display: none;
-}
-
-
 dialog {
 	padding: 40px;
 	margin: 150px auto;
@@ -193,3 +188,27 @@ dialog::backdrop {
 .completed {
 	opacity: 0.5;
 }
+
+
+.infoModal {
+	margin-top: 0px;
+	> * {
+		margin-top: 10px;
+	}
+}
+
+.infoModal[open] {
+	display: block;
+}
+
+.infoModal::backdrop {
+	background: var(--lightgray);
+}
+
+
+
+
+
+
+
+
