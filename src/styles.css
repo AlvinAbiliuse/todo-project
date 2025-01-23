@@ -131,6 +131,7 @@ dialog[open] {
 
 dialog::backdrop {
   background: var(--lightgray);
+	opacity: 0.2;
 }
 
 .topBar {
@@ -170,10 +171,9 @@ dialog::backdrop {
     border-radius: 10px;
     box-shadow: 0 0 5px var(--lightgray);
     margin: 20px;
-    padding: 20px;
+    padding: 20px 15px;
   }
   .card:hover {
-    box-shadow: 0 0 10px var(--lightgray);
     cursor: pointer;
   }
   div {
@@ -210,6 +210,7 @@ dialog::backdrop {
 
 .infoModal::backdrop {
   background: var(--lightgray);
+	opacity: 0.2;
 }
 
 .topBarCloseBtn,
@@ -230,3 +231,38 @@ dialog::backdrop {
 .sideBarCloseBtn:hover {
   cursor: pointer;
 }
+
+.lowPriority {
+	border-left: 3px solid var(--blue);
+}	
+
+.lowPriority:hover {
+	box-shadow: 0 0 5px var(--blue);
+}
+
+
+.medPriority {
+	border-left: 3px solid var(--orange);
+}
+
+.medPriority:hover {
+	box-shadow: 0 0 5px var(--orange);
+}
+
+.highPriority {
+	border-left: 3px solid var(--red);
+}
+
+.highPriority:hover {
+	box-shadow: 0 0 5px var(--red);
+}
+
+
+
+
+
+
+
+
+
+
