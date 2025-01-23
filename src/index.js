@@ -187,7 +187,6 @@ function expandCards(data) {
 	infoModal.showModal();
 }
 
-let infoCloseBtn = document.querySelector(".infoCloseBtn");
 let mainCardButtons = document.querySelector(".mainCards");
 
 mainCardButtons.addEventListener("click", (e) => {
