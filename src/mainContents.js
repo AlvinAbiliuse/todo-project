@@ -104,7 +104,16 @@ export function populateMain(data) {
     } else if (obj[i].completed == "yes") {
       card.className = "card completed";
     }
-
+		let cardP = Number(obj[i].priority);
+		if (cardP >= 0 && cardP <= 4 ) {
+			card.className = card.className + " lowPriority";
+		
+		} else if (cardP >=5 && cardP <= 7) {
+			card.className = card.className + " medPriority";
+		
+		} else if (cardP >= 8 && cardP <= 10) {
+			card.className = card.className + " highPriority";
+		}
     let title = document.createElement("h3");
     title.textContent = obj[i]["name"];
     card.appendChild(title);
