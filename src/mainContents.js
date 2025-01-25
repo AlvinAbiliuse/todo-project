@@ -14,6 +14,7 @@ export function rightContainer() {
   let img = document.createElement("img");
   img.className = "filter";
   img.setAttribute("src", image);
+	img.setAttribute("alt", "filter");
   topBar.appendChild(leftItems);
   topBar.appendChild(img);
 

@@ -9,6 +9,7 @@ export function sidebar(data) {
   let cardContainer = document.createElement("div");
 
   logo.setAttribute("src", logoImage);
+	logo.setAttribute("alt", "logo");
   logo.className = "logo";
   header.textContent = "TODO";
   newProjectBtn.className = "newProjectButton";
